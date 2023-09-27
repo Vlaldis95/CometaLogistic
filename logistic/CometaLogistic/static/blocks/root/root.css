@@ -1,0 +1,23 @@
+.root {
+  font-family: Ubuntu, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: #fff;
+  position: relative;
+}
+
+:root {
+  --main-text: #031849;
+  --main-accent: #ff7c00;
+  --white: #fdfeff;
+  --blue: #b9d4f6;
+  --title-font: Ubuntu, sans-serif;
+  --width-space-web: 120px;
+  --width-space-tab: 100px;
+  --width-space-mob: 80px;
+  --width-max-web: 1310px;
+  --width-min: 320px;
+  --width-max-tab: calc(100% - 40px * 2);
+  --width-max-mob: calc(100% - 20px * 2);
+}

@@ -1,0 +1,14 @@
+.section-title {
+  font-family: var(--title-font);
+  color: var(--main-text);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .section-title {
+    font-size: 24px;
+  }
+}

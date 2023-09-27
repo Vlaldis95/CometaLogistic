@@ -1,0 +1,6 @@
+.content {
+  max-width: 1440px;
+  min-width: var(--width-min);
+  margin: 0 auto;
+  display: grid;
+}

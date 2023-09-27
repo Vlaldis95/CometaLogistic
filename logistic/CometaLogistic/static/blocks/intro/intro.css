@@ -1,0 +1,113 @@
+.intro {
+  max-width: 100%;
+  padding: 0 65px;
+  box-sizing: border-box;
+  background-image: url("../../images/train-banner.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 15% left 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  transition: all 0.6s ease-out;
+  min-height: 760px;
+}
+.intro_clicked {
+  background-position: top 0% left 30%;
+  min-height: 600px;
+}
+.intro__title {
+  margin: 264px 0 20px;
+  padding: 0;
+  font-size: 60px;
+  line-height: 1;
+  color: var(--white);
+  max-width: 860px;
+  font-weight: 700;
+  align-self: flex-start;
+}
+.intro__text {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--white);
+  max-width: 440px;
+  font-weight: 700;
+  align-self: flex-start;
+  transition: margin 0.6s ease-out;
+}
+
+.intro__button {
+  display: none;
+}
+.intro__arrow {
+  width: 67px;
+  height: 67px;
+  background-image: url("../../images/icons/button-arrow-btm.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 50px;
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  bottom: 5%;
+}
+.intro__arrow_hidden {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+@media screen and (max-width: 1023px) {
+  .intro {
+    padding: 0 40px;
+    min-height: 676px;
+  }
+  .intro_clicked {
+    min-height: 600px;
+  }
+  .intro__title {
+    margin: 140px 0 40px;
+  }
+  .intro__arrow {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    padding: 120px 20px 20px;
+    min-height: 442px;
+  }
+  .intro_clicked {
+    min-height: 360px;
+  }
+  .intro__title {
+    margin: 0 0 12px;
+    font-size: 32px;
+  }
+  .intro__text {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 24px;
+  }
+  .intro__button {
+    display: inline-block;
+    align-self: flex-start;
+  }
+  .intro__arrow {
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    bottom: 0;
+    margin: 0;
+    transform: translateY(50%);
+  }
+}

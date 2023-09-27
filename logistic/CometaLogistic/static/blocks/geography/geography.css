@@ -1,0 +1,60 @@
+.geography {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 0 120px;
+}
+
+.geography__title {
+  text-align: center;
+  margin: 0 auto 40px;
+}
+.geography__subtitle {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--main-text);
+  max-width: 864px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.geography__map {
+  max-width: 795px;
+  margin: 0 auto;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+@media screen and (max-width: 1023px) {
+  .geography {
+    padding: 100px 0;
+  }
+  .geography__subtitle {
+    margin: 0 auto 40px;
+    padding: 0 40px;
+  }
+  .geography__map {
+    max-width: 683px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .geography {
+    padding: 80px 0 95px;
+  }
+  .geography__title {
+    padding: 0 20px;
+    text-align: left;
+    margin: 0 0 24px;
+  }
+  .geography__subtitle {
+    padding: 0 20px;
+    font-size: 16px;
+    margin: 0 auto 40px;
+    text-align: left;
+  }
+  .geography__map {
+    width: calc(100% - 2 * 20px);
+  }
+}
