@@ -1,1 +1,316 @@
-<h1> Главная страницв </h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="{% block keywords %}Default title{% endblock keywords %}"
+    />
+    <meta
+      name="description"
+      content="{% block description %}Default title{% endblock description %}"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'images/favicon.ico' %}"
+    />
+    <link rel="stylesheet" href="{% static 'pages/index.css' %}" />
+    <title>Главная</title>
+  </head>
+  <body class="root">
+    <header class="header" id="header">
+      <a class="header__logo-container" href="#">
+        <img
+          class="header__logo"
+          src="{% static './images/logo.svg' %}"
+          alt="Лого"
+        />
+      </a>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="link header__link" href="#about">О компании</a>
+          </li>
+          <li class="header__item">
+            <a class="link header__link" href="#employees">Сотрудники</a>
+          </li>
+          <li class="header__item">
+            <a class="link header__link" href="#cargo">Грузы</a>
+          </li>
+          <li class="header__item">
+            <a class="link header__link" href="#geography"
+              >География перевозок</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <a href="#footer" class="btn header__button">Контакты</a>
+
+      <button class="menu-burger">
+        <span class="menu-burger__item"></span>
+        <span class="menu-burger__item"></span>
+        <span class="menu-burger__item"></span>
+        <span class="menu-burger__item"></span>
+      </button>
+    </header>
+    <main class="content">
+      <section class="intro">
+        <h1 class="intro__title">
+          Международные перевозки грузов Comet&nbsp;Logistic
+        </h1>
+        <p class="intro__text">
+          Доставляем товар в срок всеми видами транспорта
+        </p>
+        <a href="#footer" class="btn intro__button">Контакты</a>
+
+        <button class="intro__arrow"></button>
+      </section>
+      <section class="services">
+        <ul class="services__list">
+          <li class="services__item">
+            <img
+              class="services__image"
+              src="{% static './images/icons/train-icon.webp' %}"
+              alt="Поезд"
+            />
+            <p class="services__text">Доставка поездом</p>
+          </li>
+          <li class="services__item">
+            <img
+              class="services__image"
+              src="{% static './images/icons/car-icon.webp' %}"
+              alt="Машина"
+            />
+            <p class="services__text">Доставка авто</p>
+          </li>
+          <li class="services__item">
+            <img
+              class="services__image"
+              src="{% static './images/icons/plane-icon.webp' %}"
+              alt="Самолет"
+            />
+            <p class="services__text">Доставка авиа</p>
+          </li>
+          <li class="services__item">
+            <img
+              class="services__image"
+              src="{% static './images/icons/ship-icon.webp' %}"
+              alt="Корабль"
+            />
+            <p class="services__text">Доставка морем</p>
+          </li>
+        </ul>
+      </section>
+      <section id="about" class="about">
+        <h2 class="section-title about__title">О компании</h2>
+        <div class="about__container">
+          <p class="text about__text">
+            Мы воплощаем ценности в сфере логистики для наших клиентов, будь
+            то крупные корпорации или частные лица. Будучи полноценным
+            логистическим оператором, мы готовы взять на себя всю сложность
+            и ответственность за ваши задачи. Вы делаете заказ, а мы берём
+            на себя все остальное.
+          </p>
+          <p class="text about__text">
+            Независимо от места нахождения в России или в любой точке мира,
+            вы можете быть уверены, что ваш груз будет доставлен без лишних
+            забот о таможенных формальностях и промежуточных скла дских
+            операциях. С нами ваша логистика максимально удобна и эффективна.
+          </p>
+        </div>
+      </section>
+      <swiper-container
+        class="advantages__swiper advantages"
+        direction="vertical"
+        mousewheel="true"
+        releaseOnEdges="true"
+      >
+        <swiper-slide class="advantages__item">
+          <img
+            class="advantages__image"
+            src="{% static './images/icons/speed-icon.webp' %}"
+            alt="Скорость"
+          />
+          <h3 class="advantages__subtitle">Скорость</h3>
+          <p class="advantages__text">
+            Comet Logistic придаёт огромное значение скорости доставки.
+            Мы знаем, что в мире современного бизнеса даже минуты могут иметь
+            значение. Поэтому наша компания стремится к минимальным срокам
+            доставки, не ущемляя при этом безопасность вашего груза. Наши
+            опытные логисты и профессиональные водители готовы предпринять
+            все необходимые меры, чтобы ваш груз прибыл вовремя.
+          </p>
+        </swiper-slide>
+        <swiper-slide class="advantages__item">
+          <img
+            class="advantages__image"
+            src="{% static './images/icons/lock-icon.webp' %}"
+            alt="Замок"
+          />
+          <h3 class="advantages__subtitle">Надёжность</h3>
+          <p class="advantages__text">
+            Мы понимаем, что надёжность играет ключевую роль в выборе
+            логистической компании. Comet Logistic гарантирует, что ваш груз
+            будет обработан и доставлен с максимальной бережностью и точностью.
+            Мы следим за каждым этапом доставки, начиная с погрузки и заканчивая
+            разгрузкой. Все наши процессы строго контролируются,
+            чтобы предоставить вам высший уровень надёжности
+          </p>
+        </swiper-slide>
+        <swiper-slide class="advantages__item">
+          <img
+            class="advantages__image"
+            src="{% static './images/icons/openness-icon.webp' %}"
+            alt="Открытость"
+          />
+          <h3 class="advantages__subtitle">Открытость</h3>
+          <p class="advantages__text">
+            Мы стремимся к максимальной прозрачности во всех аспектах нашей
+            работы. Это означает, что вы всегда будете в курсе того,
+            что происходит с вашим грузом. Мы предоставляем подробные отчёты
+            и информацию о маршрутах, услугах и расходах, чтобы вы могли
+            принимать информированные решения.
+          </p>
+        </swiper-slide>
+      </swiper-container>
+      <section id="employees" class="employees">
+        <h2 class="section-title employees__title">Наши сотрудники</h2>
+        <p class="employees__subtitle employees__subtitle_rol_intro">
+          Мы говорим на китайском с китайцами и на английском со всем остальным
+          миром — в этом залог успешных отгрузок и отсутствие ошибок
+          в документах, сроках и заказах.
+        </p>
+        <p class="text employees__text">
+          С начала прошлого года компания активно содействует созданию нового
+          подразделения, состоящего из сотрудников, владеющих китайским языком.
+          В настоящее время специалисты, владеющие китайским языком, работают
+          в отделе логистики, а закупки товаров, заводы-изготовители, инспекции
+          и аудиты производителей вынесены в отдельный отдел. Наши специалисты
+          работают по всему Китаю. Они уже сформировали большую базу проверенных
+          поставщиков и производителей в текстильной, обувной, кабельной
+          и других отраслях.
+        </p>
+        <p class="employees__subtitle employees__subtitle_rol_conclusion">
+          Чтобы выбрать наиболее подходящего поставщика, просто обратитесь
+          к нам!
+        </p>
+        <img
+          class="employees__image employees__image_pos_top"
+          src="{% static './images/employees-up.webp' %}"
+          alt="Работники"
+        />
+        <img
+          class="employees__image employees__image_pos_bottom"
+          src="{% static './images/employees-bottom.webp' %}"
+          alt="Работники"
+        />
+      </section>
+      <section id="cargo" class="cargo">
+        <h2 class="section-title cargo__title">С какими грузами мы работаем</h2>
+        <p class="cargo__subtitle">
+          Мы имеем квалификацию для перевозок грузов самых различных типов
+          с сохранением всех необходимых уловий хранения.
+        </p>
+        <ul class="cargo__list">
+          <li class="cargo__item">Генеральные грузы</li>
+          <li class="cargo__item">Сборные грузы</li>
+          <li class="cargo__item">Опасные грузы</li>
+          <li class="cargo__item">Грузы с терморежимом</li>
+          <li class="cargo__item">Негабаритные грузы</li>
+          <li class="cargo__item">Наливные грузы</li>
+        </ul>
+        <img
+          class="cargo__image"
+          src="{% static './images/ship.webp' %}"
+          alt="Корабль"
+        />
+      </section>
+      <section id="geography" class="geography">
+        <h2 class="section-title geography__title">География перевозок</h2>
+        <p class="geography__subtitle">
+          Мы доставляем грузы по всему миру, но наша основная специализация —
+          страны Азии, в том числе развивающаяся логистика из Китая.
+        </p>
+        <img
+          class="geography__map"
+          src="{% static './images/map.webp' %}"
+          alt="Карта"
+        />
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="footer__container">
+        <img
+          class="footer__logo"
+          src="{% static './images/logo.svg' %}"
+          alt="Лого"
+        />
+        <nav class="footer__menu">
+          <ul class="footer__menu-list">
+            <li class="footer__item">
+              <a class="footer__link" href="#about">О компании</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#employees">Сотрудники</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#cargo">Грузы</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#geography">География перевозок</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__contacts">
+          <h3 class="footer__subtitle">Контакты</h3>
+          <ul class="footer__contacts-list">
+            <li class="footer__contact">
+              <a
+                class="footer__link"
+                target="_blank"
+                rel="noreferrer"
+                href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.315635%2C59.938951&z=11"
+                ><img
+                  class="footer__icon"
+                  src="{% static './images/icons/location-icon.webp' %}"
+                  alt="Место"
+                />
+                <p class="text footer__contact-text">
+                  СПб, ул. Рылеева, д 6, БЦ Зеленые Своды
+                </p></a
+              >
+            </li>
+            <li class="footer__contact">
+              <a class="footer__link" href="tel:7965057-55-00"
+                ><img
+                  class="footer__icon"
+                  src="{% static './images/icons/phone-icon.webp' %}"
+                  alt="Телефон"
+                />
+                <p class="text footer__contact-text">+7 965 057-55-00</p></a
+              >
+            </li>
+            <li class="footer__contact">
+              <a class="footer__link" href="mailto:spacelogistic@mail.ru"
+                ><img
+                  class="footer__icon"
+                  src="{% static './images/icons/mail-icon.webp' %}"
+                  alt="Письмо"
+                />
+                <p class="text footer__contact-text">
+                  spacelogistic@mail.ru
+                </p></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script defer src="{% static './scripts/dev/index.js' %}"></script>
+  </body>
+</html>
