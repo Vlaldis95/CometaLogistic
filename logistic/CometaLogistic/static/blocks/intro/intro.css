@@ -84,7 +84,7 @@
 @media screen and (max-width: 768px) {
   .intro {
     padding: 120px 20px 20px;
-    min-height: 95vh;
+    min-height: 87vh;
   }
   .intro_clicked {
     min-height: 460px;
