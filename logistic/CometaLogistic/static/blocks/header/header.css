@@ -12,18 +12,25 @@
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  overflow-x: hidden;
+}
+.header__logo-mobile {
+  display: none;
 }
 .header__logo-container {
+  display: block;
 }
 .header__logo {
   width: 75px;
   height: 80px;
 }
+.header__nav-container {
+  flex-basis: 70%;
+}
 .header__nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .header__list {
@@ -62,28 +69,66 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    overflow: hidden;
   }
 
   .header_opened {
-    background-color: var(--blue);
-    height: 100vh;
+    left: 100%;
+    transform: translateX(-100%);
+    padding: 25px 20px 0;
+    overflow: visible;
+  }
+  .header__nav-container_opened .header__logo-mobile {
+    display: block;
   }
 
   .header__logo {
     height: 55px;
     width: 52px;
+    margin: 0 0 40px;
   }
-  .header__nav {
-    margin-top: 40px;
+  .header__nav-container {
     position: absolute;
+    width: 100vw;
+    margin: 0;
+    top: 0;
+    height: 100vh;
     right: -100%;
+  }
+  .header__nav-container_opened {
+    position: absolute;
+    width: 100vw;
+    margin: 0;
+    top: 0;
+    height: 100vh;
+    left: 0;
+  }
+  .header__nav-container_opened::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #193564b2;
+    z-index: 0;
+  }
+
+  .header__nav {
+    padding: 20px 40px 20px;
+    max-width: 245px;
+    height: 100%;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     transition: all 0.4s ease-out;
-  }
-  .header__nav_opened {
+    background-color: var(--blue);
+    margin-left: auto;
+    box-sizing: border-box;
     position: relative;
-    right: 0%;
+    z-index: 10;
   }
   .header__list {
     flex-direction: column;
@@ -95,12 +140,10 @@
     color: var(--main-text);
   }
   .header__button {
-    position: absolute;
-    right: -100%;
+    display: none;
   }
   .header__button_opened {
     position: relative;
-    right: 0;
-    transition: all 0.4s ease-out;
+    display: inline-block;
   }
 }

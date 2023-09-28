@@ -23,32 +23,41 @@
   </head>
   <body class="root">
     <header class="header" id="header">
-      <a class="header__logo-container" href="#">
+      <a class="header__logo-container" href="/">
         <img
           class="header__logo"
           src="{% static './images/logo.svg' %}"
           alt="Лого"
         />
       </a>
-      <nav class="header__nav">
-        <ul class="header__list">
-          <li class="header__item">
-            <a class="link header__link" href="#about">О компании</a>
-          </li>
-          <li class="header__item">
-            <a class="link header__link" href="#employees">Сотрудники</a>
-          </li>
-          <li class="header__item">
-            <a class="link header__link" href="#cargo">Грузы</a>
-          </li>
-          <li class="header__item">
-            <a class="link header__link" href="#geography"
-              >География перевозок</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <a href="#footer" class="btn header__button">Контакты</a>
+      <div class="header__nav-container">
+        <nav class="header__nav">
+          <a class="header__logo-mobile" href="/">
+            <img
+              class="header__logo"
+              src="{% static './images/logo.svg' %}"
+              alt="Лого"
+            />
+          </a>
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="link header__link" href="#about">О компании</a>
+            </li>
+            <li class="header__item">
+              <a class="link header__link" href="#employees">Сотрудники</a>
+            </li>
+            <li class="header__item">
+              <a class="link header__link" href="#cargo">Грузы</a>
+            </li>
+            <li class="header__item">
+              <a class="link header__link" href="#geography"
+                >География перевозок</a
+              >
+            </li>
+          </ul>
+          <a href="#footer" class="btn header__button">Контакты</a>
+        </nav>
+      </div>
 
       <button class="menu-burger">
         <span class="menu-burger__item"></span>
