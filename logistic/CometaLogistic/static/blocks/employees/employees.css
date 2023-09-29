@@ -80,7 +80,7 @@
   }
   .employees__image {
     justify-self: center;
-    width: calc(100% - 2 * 20px);
-    height: 100%;
+    width: 100%;
+    height: inherit;
   }
 }
