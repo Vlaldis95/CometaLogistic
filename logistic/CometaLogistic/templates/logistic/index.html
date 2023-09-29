@@ -20,6 +20,11 @@
     />
     <link rel="stylesheet" href="{% static 'pages/index.css' %}" />
     <title>Comet Logistic</title>
+    <style>
+      .swiper-pagination {
+        background-color: #222 !important;
+      }
+    </style>
   </head>
   <body class="root">
     <header class="header" id="header">
@@ -132,60 +137,57 @@
           </p>
         </div>
       </section>
-      <swiper-container
-        class="advantages__swiper advantages"
-        direction="vertical"
-        mousewheel="true"
-        releaseOnEdges="true"
-      >
-        <swiper-slide class="advantages__item">
-          <img
-            class="advantages__image"
-            src="{% static './images/icons/speed-icon.webp' %}"
-            alt="Скорость"
-          />
-          <h3 class="advantages__subtitle">Скорость</h3>
-          <p class="advantages__text">
-            Comet Logistic придаёт огромное значение скорости доставки.
-            Мы знаем, что в мире современного бизнеса даже минуты могут иметь
-            значение. Поэтому наша компания стремится к минимальным срокам
-            доставки, не ущемляя при этом безопасность вашего груза. Наши
-            опытные логисты и профессиональные водители готовы предпринять
-            все необходимые меры, чтобы ваш груз прибыл вовремя.
-          </p>
-        </swiper-slide>
-        <swiper-slide class="advantages__item">
-          <img
-            class="advantages__image"
-            src="{% static './images/icons/lock-icon.webp' %}"
-            alt="Замок"
-          />
-          <h3 class="advantages__subtitle">Надёжность</h3>
-          <p class="advantages__text">
-            Мы понимаем, что надёжность играет ключевую роль в выборе
-            логистической компании. Comet Logistic гарантирует, что ваш груз
-            будет обработан и доставлен с максимальной бережностью и точностью.
-            Мы следим за каждым этапом доставки, начиная с погрузки и заканчивая
-            разгрузкой. Все наши процессы строго контролируются,
-            чтобы предоставить вам высший уровень надёжности
-          </p>
-        </swiper-slide>
-        <swiper-slide class="advantages__item">
-          <img
-            class="advantages__image"
-            src="{% static './images/icons/openness-icon.webp' %}"
-            alt="Открытость"
-          />
-          <h3 class="advantages__subtitle">Открытость</h3>
-          <p class="advantages__text">
-            Мы стремимся к максимальной прозрачности во всех аспектах нашей
-            работы. Это означает, что вы всегда будете в курсе того,
-            что происходит с вашим грузом. Мы предоставляем подробные отчёты
-            и информацию о маршрутах, услугах и расходах, чтобы вы могли
-            принимать информированные решения.
-          </p>
-        </swiper-slide>
-      </swiper-container>
+      <section class="advantages">
+        <swiper-container init="false" class="advantages__swiper">
+          <swiper-slide class="advantages__item">
+            <img
+              class="advantages__image"
+              src="{% static './images/icons/speed-icon.webp' %}"
+              alt="Скорость"
+            />
+            <h3 class="advantages__subtitle">Скорость</h3>
+            <p class="advantages__text">
+              Comet Logistic придаёт огромное значение скорости доставки.
+              Мы знаем, что в мире современного бизнеса даже минуты могут иметь
+              значение. Поэтому наша компания стремится к минимальным срокам
+              доставки, не ущемляя при этом безопасность вашего груза. Наши
+              опытные логисты и профессиональные водители готовы предпринять
+              все необходимые меры, чтобы ваш груз прибыл вовремя.
+            </p>
+          </swiper-slide>
+          <swiper-slide class="advantages__item">
+            <img
+              class="advantages__image"
+              src="{% static './images/icons/lock-icon.webp' %}"
+              alt="Замок"
+            />
+            <h3 class="advantages__subtitle">Надёжность</h3>
+            <p class="advantages__text">
+              Мы понимаем, что надёжность играет ключевую роль в выборе
+              логистической компании. Comet Logistic гарантирует, что ваш груз
+              будет обработан и доставлен с максимальной бережностью
+              и точностью. Мы следим за каждым этапом доставки, начиная
+              с погрузки и заканчивая разгрузкой. Все наши процессы строго
+              контролируются, чтобы предоставить вам высший уровень надёжности
+            </p>
+          </swiper-slide>
+          <swiper-slide class="advantages__item">
+            <img
+              class="advantages__image"
+              src="{% static './images/icons/openness-icon.webp' %}"
+              alt="Открытость"
+            />
+            <h3 class="advantages__subtitle">Открытость</h3>
+            <p class="advantages__text">
+              Мы стремимся к максимальной прозрачности во всех аспектах нашей
+              работы. Это означает, что вы всегда будете в курсе того,
+              что происходит с вашим грузом. Мы предоставляем подробные отчёты
+              и информацию о маршрутах, услугах и расходах, чтобы вы могли
+              принимать информированные решения.
+            </p>
+          </swiper-slide>
+        </swiper-container>
+      </section>
       <section id="employees" class="employees">
         <h2 class="section-title employees__title">Наши сотрудники</h2>
         <p class="employees__subtitle employees__subtitle_rol_intro">
@@ -321,5 +323,69 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <script defer src="{% static './scripts/dev/index.js' %}"></script>
+    <script>
+      const swiperEl = document.querySelector("swiper-container");
+
+      const swiperParams = {
+        injectStyles: [
+          `
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color: #000;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.2);
+      }
+      @media screen and (max-width: 846px) {
+        .swiper-pagination-bullet {
+          display: none;
+        }
+      }
+
+      .swiper-pagination-bullet-active {
+        color: #fff;
+        background: #ff7c00;
+      }
+      `,
+        ],
+        pagination: {
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + "</span>";
+          },
+        },
+        slidesPerView: 1.2,
+        direction: "horizontal",
+        mousewheel: true,
+        centeredSlides: true,
+        releaseOnEdges: true,
+        spaceBetween: 10,
+        grabCursor: true,
+
+        breakpoints: {
+          846: {
+            slidesPerView: 1,
+            pagination: {
+              clickable: true,
+              hiddenClass: true,
+            },
+          },
+        },
+        on: {
+          init() {
+            // ...
+          },
+        },
+      };
+
+      // now we need to assign all parameters to Swiper element
+      Object.assign(swiperEl, swiperParams);
+
+      // and now initialize it
+      swiperEl.initialize();
+    </script>
   </body>
 </html>
