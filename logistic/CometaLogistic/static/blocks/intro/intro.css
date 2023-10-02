@@ -29,10 +29,14 @@
   max-width: 860px;
   font-weight: 700;
   align-self: flex-start;
+  transition: all 0.4s linear;
+}
+.intro_clicked > .intro__title {
+  margin: 204px 0 20px;
 }
 .intro__text {
   margin: 0;
-  padding: 0;
+  padding: 0 0 50px;
   font-size: 28px;
   line-height: 1;
   color: var(--white);
