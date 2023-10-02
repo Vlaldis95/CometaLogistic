@@ -140,57 +140,63 @@
       <section class="advantages">
         <swiper-container init="false" class="advantages__swiper">
           <swiper-slide class="advantages__item">
-            <img
-              class="advantages__image"
-              src="{% static './images/icons/speed-icon.webp' %}"
-              alt="Скорость"
-            />
-            <h3 class="advantages__subtitle">Скорость</h3>
-            <p class="advantages__text">
-              Comet Logistic придаёт огромное значение скорости доставки.
-              Мы знаем, что в мире современного бизнеса даже минуты могут иметь
-              значение. Поэтому наша компания стремится к минимальным срокам
-              доставки, не ущемляя при этом безопасность вашего груза. Наши
-              опытные логисты и профессиональные водители готовы предпринять
-              все необходимые меры, чтобы ваш груз прибыл вовремя.
-            </p>
+            <div class="advantages__item-inner-container">
+              <img
+                class="advantages__image"
+                src="{% static './images/icons/speed-icon.webp' %}"
+                alt="Скорость"
+              />
+              <h3 class="advantages__subtitle">Скорость</h3>
+              <p class="advantages__text">
+                Comet Logistic придаёт огромное значение скорости доставки.
+                Мы знаем, что в мире современного бизнеса даже минуты могут
+                иметь значение. Поэтому наша компания стремится к минимальным
+                срокам доставки, не ущемляя при этом безопасность вашего груза.
+                Наши опытные логисты и профессиональные водители готовы
+                предпринять все необходимые меры, чтобы ваш груз прибыл вовремя.
+              </p>
+            </div>
           </swiper-slide>
           <swiper-slide class="advantages__item">
-            <img
-              class="advantages__image"
-              src="{% static './images/icons/lock-icon.webp' %}"
-              alt="Замок"
-            />
-            <h3 class="advantages__subtitle">Надёжность</h3>
-            <p class="advantages__text">
-              Мы понимаем, что надёжность играет ключевую роль в выборе
-              логистической компании. Comet Logistic гарантирует, что ваш груз
-              будет обработан и доставлен с максимальной бережностью
-              и точностью. Мы следим за каждым этапом доставки, начиная
-              с погрузки и заканчивая разгрузкой. Все наши процессы строго
-              контролируются, чтобы предоставить вам высший уровень надёжности
-            </p>
+            <div class="advantages__item-inner-container">
+              <img
+                class="advantages__image"
+                src="{% static './images/icons/lock-icon.webp' %}"
+                alt="Замок"
+              />
+              <h3 class="advantages__subtitle">Надёжность</h3>
+              <p class="advantages__text">
+                Мы понимаем, что надёжность играет ключевую роль в выборе
+                логистической компании. Comet Logistic гарантирует, что ваш груз
+                будет обработан и доставлен с максимальной бережностью
+                и точностью. Мы следим за каждым этапом доставки, начиная
+                с погрузки и заканчивая разгрузкой. Все наши процессы строго
+                контролируются, чтобы предоставить вам высший уровень надёжности
+              </p>
+            </div>
           </swiper-slide>
           <swiper-slide class="advantages__item">
-            <img
-              class="advantages__image"
-              src="{% static './images/icons/openness-icon.webp' %}"
-              alt="Открытость"
-            />
-            <h3 class="advantages__subtitle">Открытость</h3>
-            <p class="advantages__text">
-              Мы стремимся к максимальной прозрачности во всех аспектах нашей
-              работы. Это означает, что вы всегда будете в курсе того,
-              что происходит с вашим грузом. Мы предоставляем подробные отчёты
-              и информацию о маршрутах, услугах и расходах, чтобы вы могли
-              принимать информированные решения.
-            </p>
+            <div class="advantages__item-inner-container">
+              <img
+                class="advantages__image"
+                src="{% static './images/icons/openness-icon.webp' %}"
+                alt="Открытость"
+              />
+              <h3 class="advantages__subtitle">Открытость</h3>
+              <p class="advantages__text">
+                Мы стремимся к максимальной прозрачности во всех аспектах нашей
+                работы. Это означает, что вы всегда будете в курсе того,
+                что происходит с вашим грузом. Мы предоставляем подробные отчёты
+                и информацию о маршрутах, услугах и расходах, чтобы вы могли
+                принимать информированные решения.
+              </p>
+            </div>
           </swiper-slide>
         </swiper-container>
       </section>
       <section id="employees" class="employees">
         <h2 class="section-title employees__title">Наши сотрудники</h2>
-        <p class="employees__subtitle employees__subtitle_rol_intro">
+        <p class="text employees__subtitle_rol_intro">
           Мы говорим на китайском с китайцами и на английском со всем остальным
           миром — в этом залог успешных отгрузок и отсутствие ошибок
           в документах, сроках и заказах.
@@ -205,7 +211,7 @@
           поставщиков и производителей в текстильной, обувной, кабельной
           и других отраслях.
         </p>
-        <p class="employees__subtitle employees__subtitle_rol_conclusion">
+        <p class="text employees__subtitle_rol_conclusion">
           Чтобы выбрать наиболее подходящего поставщика, просто обратитесь
           к нам!
         </p>
@@ -213,16 +219,18 @@
           class="employees__image employees__image_pos_top"
           src="{% static './images/employees-up.webp' %}"
           alt="Работники"
+          loading="lazy"
         />
         <img
           class="employees__image employees__image_pos_bottom"
           src="{% static './images/employees-bottom.webp' %}"
           alt="Работники"
+          loading="lazy"
         />
       </section>
       <section id="cargo" class="cargo">
         <h2 class="section-title cargo__title">С какими грузами мы работаем</h2>
-        <p class="cargo__subtitle">
+        <p class="text cargo__subtitle">
           Мы имеем квалификацию для перевозок грузов самых различных типов
           с сохранением всех необходимых уловий хранения.
         </p>
@@ -234,15 +242,27 @@
           <li class="cargo__item">Негабаритные грузы</li>
           <li class="cargo__item">Наливные грузы</li>
         </ul>
-        <img
-          class="cargo__image"
-          src="{% static './images/ship.webp' %}"
-          alt="Корабль"
-        />
+        <div class="cargo__video-container">
+          <video
+            alt="Корабль"
+            class="cargo__video"
+            controls
+            preload="true"
+            autoplay
+            loop
+            muted
+          >
+            <source src="{% static './images/video.mp4' %}" type="video/mp4" />
+
+            Download the
+            <a href="{% static './images/video.mp4' %}">MP4</a>
+            video.
+          </video>
+        </div>
       </section>
       <section id="geography" class="geography">
         <h2 class="section-title geography__title">География перевозок</h2>
-        <p class="geography__subtitle">
+        <p class="text geography__subtitle">
           Мы доставляем грузы по всему миру, но наша основная специализация —
           страны Азии, в том числе развивающаяся логистика из Китая.
         </p>
@@ -250,6 +270,7 @@
           class="geography__map"
           src="{% static './images/map.webp' %}"
           alt="Карта"
+          loading="lazy"
         />
       </section>
     </main>
@@ -329,6 +350,10 @@
       const swiperParams = {
         injectStyles: [
           `
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #fff;
+      }
       .swiper-pagination-bullet {
         width: 10px;
         height: 10px;
@@ -341,6 +366,10 @@
       }
       @media screen and (max-width: 846px) {
         .swiper-pagination-bullet {
+          display: none;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
           display: none;
         }
       }
@@ -364,6 +393,7 @@
         releaseOnEdges: true,
         spaceBetween: 10,
         grabCursor: true,
+        navigation: true,
 
         breakpoints: {
           846: {

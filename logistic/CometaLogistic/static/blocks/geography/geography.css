@@ -10,10 +10,6 @@
   margin: 0 auto 40px;
 }
 .geography__subtitle {
-  font-size: 24px;
-  line-height: 1.2;
-  font-weight: 400;
-  color: var(--main-text);
   max-width: 864px;
   margin: 0 auto 40px;
   text-align: center;
@@ -50,7 +46,6 @@
   }
   .geography__subtitle {
     padding: 0 20px;
-    font-size: 16px;
     margin: 0 auto 40px;
     text-align: left;
   }
