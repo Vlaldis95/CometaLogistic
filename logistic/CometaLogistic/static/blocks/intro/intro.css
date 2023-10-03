@@ -3,7 +3,7 @@
   padding: 0 65px;
   box-sizing: border-box;
   background-image: url("../../images/train-banner.webp");
-  background-size: 120%;
+  background-size: cover;
   background-position: top 40% left 30%;
   background-repeat: no-repeat;
   background-position: center;
@@ -17,7 +17,7 @@
   min-height: 100vh;
 }
 .intro_clicked {
-  background-position: top 10% left 20%;
+  background-position: top 0% left 20%;
   min-height: calc(100vh - 200px);
 }
 .intro__title {
@@ -73,19 +73,16 @@
 
 @media screen and (max-width: 1025px) {
   .intro {
-    background-size: 120%;
+    background-size: cover;
     background-position: top 40% left 40%;
     padding: 0 40px;
   }
-  .intro_clicked {
-    background-position: top 10% left 10%;
-    min-height: calc(100vh - 200px);
-  }
+
   .intro__title {
     margin: 140px 0 40px;
   }
   .intro__arrow {
-    margin-bottom: 40px;
+    display: none;
   }
 }
 
@@ -108,8 +105,5 @@
   .intro__button {
     display: inline-block;
     align-self: flex-start;
-  }
-  .intro__arrow {
-    display: none;
   }
 }
