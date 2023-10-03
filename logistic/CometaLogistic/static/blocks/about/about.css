@@ -43,6 +43,7 @@
   }
   .about__title {
     margin: 0 0 24px;
+    text-align: left;
   }
   .about__container {
     gap: 12px;
