@@ -40,13 +40,15 @@
   margin: 0;
   padding: 0;
 }
-.header__item {
-}
+
 .header__link {
   font-weight: 500;
 }
-.header__button {
+
+.header__link:hover {
+  color: var(--main-accent);
 }
+
 @media screen and (max-width: 1380px) {
   .header {
     padding: 20px 40px;
@@ -138,6 +140,9 @@
   }
   .header__link {
     color: var(--main-text);
+  }
+  .header__link:hover {
+    color: inherit;
   }
   .header__button {
     display: none;
